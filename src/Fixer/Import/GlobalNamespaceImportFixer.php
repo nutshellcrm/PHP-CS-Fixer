@@ -713,6 +713,10 @@ if (count($x)) {
 
     private function traverseDocBlockTypes(DocBlock $doc, callable $callback)
     {
+        // We don't want to parse docblocks since sometimes they contain
+        // classes we are not using in the file. e.g. Zend_Db_Table_Rowset_Abstract
+        return false;
+
         $annotations = $doc->getAnnotationsOfType(Annotation::getTagsWithTypes());
 
         if (!$annotations) {
