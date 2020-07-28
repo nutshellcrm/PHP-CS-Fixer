@@ -112,7 +112,7 @@ final class NoUnusedImportsFixer extends AbstractFixer
                 }
             }
 
-            $this->removeUsesInSameNamespace($tokens, $currentNamespaceUseDeclarations, $namespace);
+            // $this->removeUsesInSameNamespace($tokens, $currentNamespaceUseDeclarations, $namespace);
         }
     }
 
